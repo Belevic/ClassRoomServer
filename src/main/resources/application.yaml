@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    jdbc-url: jdbc:postgresql://localhost:5432/class_room
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL82Dialect
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL82Dialect
+        jdbc:
+          time_zone: Europe/Minsk
+    database: postgresql
+    show-sql: false
+    hibernate:
+      ddl-auto: create
+  output:
+    ansi:
+      enabled: detect
+
+logging:
+  level:
+    org.springframework.orm.jpa: TRACE
+    org.springframework.transaction: TRACE
+    root: INFO
+    jdbc:
+      sqlonly: OFF
+      sqltiming: OFF
+      audit: OFF
+      resultsettable: OFF
+      resultset: OFF
+      connection: OFF
